@@ -45,4 +45,16 @@ export class AuthService {
     return this.roles.indexOf('ADMIN') > -1;
   }
   public loggedUser!: string;
+  setLoggedUserFromLocalStorage(login: string) {
+    this.loggedUser = login;
+    this.isloggedIn = true;
+    this.getUserRoles(login);
+  }
+  getUserRoles(username: string) {
+    this.users.forEach((curUser) => {
+      if (curUser.username == username) {
+        this.roles = curUser.roles;
+      }
+    });
+  }
 }

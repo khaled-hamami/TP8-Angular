@@ -8,6 +8,7 @@ import { UpdatevideoGameComponent } from './update-videoGame/update-videoGame.co
 import { VideoGamesComponent } from './videoGames/videoGames.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
     AddvideoGameComponent,
     VideoGamesComponent,
     LoginComponent,
+    ForbiddenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
